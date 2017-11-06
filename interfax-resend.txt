@@ -1,0 +1,2 @@
+javascript:$('img[src="images/Failed.png"]').closest('tr').find('img[alt="Resend"]').parent().each(function(i, a){ console.log(a);var x=a.href.split("'");var txid=x[3];var fax=x[1]; $.post("https://secure.interfax.net/default.aspx?Target=ResendFax&Method=ResendSingle&del="+txid, {'fax':fax,'senddel':'on','userid':'INTERFAX_ID','transactionid':txid}, function(d){ console.log(d);a.style="background-color: orange;"}); });
+
